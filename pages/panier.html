@@ -1,46 +1,29 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <!-- Ajout balise meta robots -->
-	<meta name="robots" content="index, follow">
-
-	<!-- Ajout des description avec "mot clé" -->
-	<meta name="description" content="Ours en peluche faits à la main">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/png" href="JWDP5/images/favicon.png">
-    
-	<!-- Liens des fichiers CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/et-line.min.css">
+	<head>
+		<meta charset="utf-8">
 	
-    <!-- Liens des fichers JS -->
-	<script src=".JWDP5/controllers/teddy.js"></script>
-	<script src="./JWDP5/app.js"></script>
-	<script src="./JWDP5/server.js"></script>
+		<!-- Ajout des description avec "mot clé" -->
+		<meta name="description" content="Ours en peluche faits à la main">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+		
+		<!-- Font Awesome -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<script src="https://kit.fontawesome.com/e6ec01f946.js" crossorigin="anonymous"></script>
+		
+		
+	
+	
+	
+	<!-- Ajout du titire avec le "mot clé" principal -->
+		<title>Orinoco - Ours en peluche faits à la main</title>
+	
+	
+		
+	</head>
 
 
-
-<!-- Ajout du titire avec le "mot clé" principal -->
-    <title>Orinoco - Ours en peluche faits à la main</title>
-
-    
-<!-- Analytics (version démonstration) -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54516992-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-54516992-1');
-	</script>
-
-<!-- Analytics END -->
-    
-</head>
 <body>
 	<!-- Principal conteneur -->
 	<div class="page-container">
@@ -48,11 +31,82 @@
 		<header>
 			
 		</header>
+
+		<!-- Bloc 0 : Titre -->
+		<section>
+			<h1>
+				Votre panier
+			</h1>
+			<p>
+				Vos nouveaux compagnons vous rejoindront bientôt 
+			</p>
+		</section>
+
+		<section class="cart">
+			<h2>
+				Nounours
+			</h2>
+			
+			<div id="results"></div> <!-- Le js injecte le html généré ici -->
+
+		</section>
+
+		<form id="shipping">
+			<h2>
+				Adresse de livraison
+			</h2>
+
+			<div class="total-price">
+				<p>Prix total</p>
+				<p> €€€</p> <!-- Prix caculer en js -->
+			</div>
+
+			<div>
+				<label for="firsName">
+					Prénom
+				</label>
+				<input type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
+			</div>
+
+			<div>
+				<label for="lastName">
+					Nom
+				</label>
+				<input type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
+			</div>
+
+			<div>
+				<label for="adress">
+					Adresse
+				</label>
+				<input type="text" name="adress" placeholder="Adresse" required>
+			</div>
+
+			<div>
+				<label for="city">
+					Ville
+				</label>
+				<input type="text" name="city" placeholder="Ville" required pattern="^[A-zÀ-ú-]+$">
+			</div>
+
+			<div>
+				<label for="email">
+					E-mail
+				</label>
+				<input type="email" name="email" placeholder="E-mail" required>
+			</div>
+
+			<input type="submit"  value="Validé">
+
+			<p id="erreur"></p>
+		</form>
+
+
 		
 		<footer>
 			
 		</footer>
 		
-
+		<script src="/js/panier.js"></script>
 </body>
 </html>
