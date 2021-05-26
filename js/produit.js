@@ -50,7 +50,7 @@ async function presProduct() {
                             <table>
                                 <tr>
                                     <td>Prix</td>
-                                    <td>${produit.price}</td>
+                                    <td>${numberWithCommas(produit.price)} €</td>
                                 </tr>
 
                                 <tr>
@@ -139,5 +139,11 @@ function generateSelect(items) {
 
 
 };
+
+// Fonction pour mettre une virgule à deux chiffres en partant de la droite
+function numberWithCommas(x){
+	return x.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ',');
+}
+
 
 presProduct();
