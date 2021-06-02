@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  },
+  "name": "bednarekclement_5_01052010",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobidikz/BednarekClement_5_01052010.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobidikz/BednarekClement_5_01052010/issues"
+  },
+  "homepage": "https://github.com/mobidikz/BednarekClement_5_01052010#readme",
+  "description": ""
+}
