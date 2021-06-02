@@ -18,8 +18,8 @@ async function showProduits() {
         produits.map(produit => (
 
             `
-                <div class="container-products">
-                    <div class="container-products_card">
+                <div class="row container-products">
+                    <div class="col container-products_card">
                         <a href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
 
                         <div class="container-products_card_img">
