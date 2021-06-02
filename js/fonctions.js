@@ -23,7 +23,7 @@ async function showProduits() {
                         <a href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
 
                         <div class="container-products_card_img">
-                            <img class="produit-photo" src="${produit.imageUrl}" />
+                            <img class="produit-photo" src="${produit.imageUrl}"/>
                         </div>
 
                         <div class="container-products_card_name">
@@ -31,11 +31,11 @@ async function showProduits() {
                         </div>
 
                         <div class="container-products_card_stars">
-                            * * * * *
+                            ⭐⭐⭐⭐⭐
                         </div>
 
                         <div class="container-products_card_price">
-                            <em class="produit-prix"> ${produit.price} </em>
+                            <em class="produit-prix"> ${numberWithCommas(produit.price)} € </em>
                         </div>
                     </div>
                 </div>
@@ -43,6 +43,11 @@ async function showProduits() {
         )).join('')
     );
 };
+
+// Fonction pour mettre une virgule à deux chiffres en partant de la droite
+function numberWithCommas(x){
+	return x.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ',');
+}
 
 console.log(results);
 showProduits();
