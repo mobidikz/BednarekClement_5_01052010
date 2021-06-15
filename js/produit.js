@@ -10,7 +10,7 @@ const fetchProduit = async() => {
 // Création de la Présentation Produit
 async function presProduct() {
     console.log("fonction showProduits() appellée ");
-    const produit = await fetchProduit();
+    produit = await fetchProduit(); // Les variables non-déclarées sont toujours globales
 
     const results = document.getElementById("results");
     results.innerHTML = (
@@ -32,7 +32,7 @@ async function presProduct() {
                         <img class="produit-photo" src="${produit.imageUrl}" />
                     </div>
                     <section>
-                        <h2 class="produit-nom"> 
+                        <h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
                             ${produit.name} 
                         </h2>
                         <div>
@@ -50,7 +50,7 @@ async function presProduct() {
                             <table>
                                 <tr>
                                     <td>Prix</td>
-                                    <td>${numberWithCommas(produit.price)} €</td>
+                                    <td id="prix-produit">${numberWithCommas(produit.price)} €</td>
                                 </tr>
 
                                 <tr>
@@ -129,16 +129,15 @@ function generateSelect(items) {
     let select =`<select>`;
 
     for (let item of items) {
-        select += `<option>${item}</option>`
+        select += `<option value="${item}">${item}</option>`
     }
 
     select += "</select>";
 
-    console.log(select);
     return select;
-
-
 };
+
+
 
 // Fonction pour mettre une virgule à deux chiffres en partant de la droite
 function numberWithCommas(x){
@@ -146,4 +145,58 @@ function numberWithCommas(x){
 }
 
 
+//ajout dans panier
+
+// let unNounours = [];
+
+//Nique ta mère javascript
+
+let couleurProduit ="";
+let nomProduit = "";
+let prixProduit ="";
+
+function setData(){
+ 
+    couleurProduit = document.querySelector("select").value;
+    console.log(couleurProduit);
+    
+    nomProduit = produit.name;
+    prixProduit = numberWithCommas(produit.price);
+
+
+
+    const unNounours = JSON.parse(localStorage.getItem("unNounours")) || []; //retourne le premier qui est vrais 
+    console.log(unNounours);
+
+
+    unNounours.push(
+        {
+             Nom : nomProduit,
+             Prix : prixProduit,
+             Couleur : couleurProduit
+        }
+    );
+  
+
+    // unNounours = JSON.parse(localStorage.getItem("unNounours"));
+    console.log(unNounours);
+
+    
+    localStorage.setItem("unNounours", JSON.stringify(unNounours));
+
+//     unNounours = JSON.parse(unNounours);
+//     localStorage.setItem("produit", unNounours);
+
+//     console.log(unNounours);
+  
+
+//    localStorage.setItem("unNounours", JSON.stringify(unNounours));
+//    console.log(unNounours);
+}
+
+
+
+
 presProduct();
+setData();
+
