@@ -58,7 +58,109 @@
 		</div>
 		</header>
 
-		<div id="results"></div>
+		<!-- Bloc 0 : Titre -->
+		<section>
+			<h1 id="nom-produit-titre">
+				
+			</h1>
+			<p id="description-produit-titre">
+				
+			</p>
+		</section>
+
+		<!-- Bloc 1 : Produit et personnalisation -->
+		<section>
+			<div>
+				<img class="produit-photo" id="image-produit" />
+			</div>
+			<section>
+				<h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
+					 
+				</h2>
+				<div>
+					<div> 
+						⭐⭐⭐⭐⭐
+					</div>
+					<div>
+						Stock
+					</div>
+				</div>
+				<p id="description-produit">
+				
+				</p>
+				<div class="personnalisation">
+					<table>
+						<tr>
+							<td>Prix</td>
+							<td id="prix-produit"></td>
+						</tr>
+
+						<tr>
+							<td>Taille</td>
+							<td>35 cm</td>
+						</tr>
+
+						<tr>
+							<td>Couleur</td>
+							<td id="couleur-produit">
+								
+							</td>
+						</tr>
+
+						<tr>
+							<td>Disponibilité</td>
+							<td>7 en stock</td>
+						</tr>
+
+					</table>
+				</div>
+				<div>
+					<button>
+						Ajouter au panier
+					</button>
+					<button>
+						Acheter maintenant
+					</button>
+				</div>
+			</section>
+		</section>
+
+		<!-- Bloc 2 : Description détaillée du produit -->
+		<section>
+			<h2>
+				Description du produit
+			</h2>
+
+			<p>
+				Nom de la liste.
+			</p>
+			<p>
+				Introduction de 2 lignes.
+			</p>
+			<ul>
+				<li>
+					Détail 1
+				</li>
+
+				<li>
+					Détail 2
+				</li>
+
+				<li>
+					Détail 3
+				</li>
+				<li>
+					Détail 4
+				</li>
+			</ul>
+
+			<p>
+				Conclusion
+			</p>
+			<p>
+				Conclusion en deux ou trois lignes.
+			</p>
+		</section>
 
 		<button onclick="setData()" type="button" class="btn btn-success">Ajouter au panier</button>
 

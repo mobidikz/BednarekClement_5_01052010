@@ -12,117 +12,34 @@ async function presProduct() {
     console.log("fonction showProduits() appellée ");
     produit = await fetchProduit(); // Les variables non-déclarées sont toujours globales
 
-    const results = document.getElementById("results");
-    results.innerHTML = (
+    const nomProduitTitre = document.getElementById("nom-produit-titre");
+    nomProduitTitre.innerHTML = produit.name;
 
-        `   <div>
-                <!-- Bloc 0 : Titre -->
-                <section>
-                    <h1>
-                        ${produit.name}
-                    </h1>
-                    <p>
-                        ${produit.description}
-                    </p>
-                </section>
-        
-                <!-- Bloc 1 : Produit et personnalisation -->
-                <section>
-                    <div>
-                        <img class="produit-photo" src="${produit.imageUrl}" />
-                    </div>
-                    <section>
-                        <h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
-                            ${produit.name} 
-                        </h2>
-                        <div>
-                            <div> 
-                                ⭐⭐⭐⭐⭐
-                            </div>
-                            <div>
-                                Stock
-                            </div>
-                        </div>
-                        <p>
-                            ${produit.description}
-                        </p>
-                        <div class="personnalisation">
-                            <table>
-                                <tr>
-                                    <td>Prix</td>
-                                    <td id="prix-produit">${numberWithCommas(produit.price)} €</td>
-                                </tr>
+    // const maBite = 'salut'
+    // const concat   = 'avant ' + maBite + ' après' // avant salut après
+    // const interpol = `avant ${maBite} après`
 
-                                <tr>
-                                    <td>Taille</td>
-                                    <td>35 cm</td>
-                                </tr>
+    const nomProduit = document.getElementById("nom-produit");
+    nomProduit.innerHTML = produit.name;
 
-                                <tr>
-                                    <td>Couleur</td>
-                                    <td>
-                                        ${generateSelect(produit.colors)}
-                                    </td>
-                                </tr>
+    const descriptionProduitTitre = document.getElementById("description-produit-titre");
+    descriptionProduitTitre.innerHTML = produit.description;
 
-                                <tr>
-                                    <td>Disponibilité</td>
-                                    <td>7 en stock</td>
-                                </tr>
+    const descriptionProduit = document.getElementById("description-produit");
+    descriptionProduit.innerHTML = produit.description;
 
-                            </table>
-                        </div>
-                        <div>
-                            <button>
-                                Ajouter au panier
-                            </button>
-                            <button>
-                                Acheter maintenant
-                            </button>
-                        </div>
-                    </section>
-                </section>
-        
-                <!-- Bloc 2 : Description détaillée du produit -->
-                <section>
-                    <h2>
-                        Description du produit
-                    </h2>
-        
-                    <p>
-                        Nom de la liste.
-                    </p>
-                    <p>
-                        Introduction de 2 lignes.
-                    </p>
-                    <ul>
-                        <li>
-                            Détail 1
-                        </li>
-        
-                        <li>
-                            Détail 2
-                        </li>
-        
-                        <li>
-                            Détail 3
-                        </li>
-                        <li>
-                            Détail 4
-                        </li>
-                    </ul>
-        
-                    <p>
-                        Conclusion
-                    </p>
-                    <p>
-                        Conclusion en deux ou trois lignes.
-                    </p>
-                </section>
-            </div>
-        `
-    );
-};
+    const couleurProduit = document.getElementById("couleur-produit");
+    couleurProduit.innerHTML = generateSelect(produit.colors);
+
+    const prixProduit = document.getElementById("prix-produit");
+    prixProduit.innerHTML = numberWithCommas(produit.price);
+              
+   const imageProduit = document.getElementById("image-produit");
+   imageProduit.setAttribute("src" , produit.imageUrl);                 
+
+
+                                   
+    };
 
 // Selection de la couleur du produit
 function generateSelect(items) {
