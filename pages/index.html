@@ -15,8 +15,8 @@
 		<script src="https://kit.fontawesome.com/e6ec01f946.js" crossorigin="anonymous"></script>
 		
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/style.css" />		
-
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/style.css">
 
 
 	<!-- Ajout du titire avec le "mot clé" principal -->
@@ -27,11 +27,11 @@
 		<!-- Principal conteneur -->
 		
 		<header class="bg-info">
-			<div class="container">
+			<div class="container ">
 				<div class="row">
 					<nav class="col navbar navbar-expand-sm navbar-dark">
 					<a class="navbar-brand" href="index.html">
-						<img src="/images/logo-small.webp" width="80" alt="Site logo">
+						<img class=img-responsive src="/images/logo-small.webp" width="80" alt="Site logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -62,7 +62,7 @@
 
 		<main>
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 mx-auto w-md-50">
 					<!-- Bloc 0 : Titre -->
 					<div class="row jumbotron">
 						<h1 class="col-12 text-center">
@@ -73,11 +73,11 @@
 					<!-- Bloc 1 : Présentation -->
 					<section class="row">
 						<div class="col-12 ">
-							<h2 class="text-center">
+							<h2 class="text-center my-4">
 								Voici comment cela fonctionne :
 							</h2>
-							<div class="row text-center justify-content-center">
-								<div class="card-deck">
+							<div class="container text-center">
+								<div class="card-deck justify-content-center">
 									<div class="card">
 										<img class="card-img-top" src="/images/ours.svg" alt="dessin ourson">
 										<div class="col card-body">
@@ -91,7 +91,7 @@
 									</div>
 
 									<div class="card">
-										<img class="card-img-top" src="/images/ours-couleurs.svg" alt="dessin ourson">
+										<img class="card-img-top " src="/images/ours-couleurs.svg" alt="dessin ourson">
 										<div class="col card-body">
 											<h5 class="card-title">
 												Selectionne la couleur !
@@ -122,37 +122,24 @@
 					<!-- Bloc 2 : Tout les produits -->
 					<section class="row">
 						<div class="col">
-							<h2 class="text-center">
+							<h2 class="text-center my-4">
 								La famille Nounours 🐻
 							</h2>
-							<div id="results"></div> <!-- Le js inject le html généré ici -->
+
+							<div class="" id="results"></div> <!-- Le js inject le html généré ici -->
+
 						</div>
 					
 
 					</section>
 
-					<!-- Bloc 3 : Promorion timer -->
-					<!-- <section>
-						<h2>
-							15% de réduction avec ton code secret
-						</h2>
-						<p>
-							Offre à durée limitée
-						</p>
-						<div class="timer">
-
-						</div>
-						<button>
-							Affiche ton code
-						</button>
-					</section> -->
 
 					<!-- Bloc 4 : Avis des clients -->
-					<section>
-					<h2 class="text-center">
+					<section class="">
+					<h2 class="text-center my-4">
 						Ils aiment leurs Nounours 😍
 					</h2>
-					<div class="row container-reviews">
+					<div class="row container-reviews justify-content-center text-center">
 						<figure class="col-12 col-lg-3 container-reviews_card">
 							<div> <!-- image client-->
 								
@@ -199,11 +186,11 @@
 
 					<!-- Bloc 5 : Photos Instagram -->
 					<section>
-						<h2>
+						<h2 class="text-center">
 							@Instagram #Orinoco
 						</h2>
 						
-						<div class="row container-instagram">
+						<div class="row container-instagram justify-content-center">
 
 							<!-- card 1 -->
 							<div class="col-12 col-lg-5 container-instagram_card">
@@ -281,69 +268,52 @@
 			</div>
 		</main>
 			
-		<footer class="row">
-			<div class="col container-social">
-				<div class="logo">
-
-				</div>
-
-				<a class="container-social_link">
-					<i class="fab fa-facebook-f"></i>
-					<p>
-						Facebook
-					</p>
-				</a>
-
-				<a class="container-social_link">
-					<i class="fab fa-twitter"></i>
-					<p>
-						Twitter
-					</p>
-				</a>
-
-				<a class="container-social_link">
-					<i class="fab fa-instagram"></i>
-					<p>
-						Instagram
-					</p>
-				</a>
+		<footer class="bg-info text-center text-white">
+			<!-- Grid container -->
+			<div class="container p-4 pb-0">
+			  <!-- Section: Social media -->
+			  <section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-facebook-f"></i
+				></a>
+		  
+				<!-- Twitter -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-twitter"></i
+				></a>
+		  
+				<!-- Google -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-google"></i
+				></a>
+		  
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-instagram"></i
+				></a>
+		  
+				<!-- Linkedin -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-linkedin-in"></i
+				></a>
+		  
+				<!-- Github -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				  ><i class="fab fa-github"></i
+				></a>
+			  </section>
+			  <!-- Section: Social media -->
 			</div>
-
-			<section class="col container-contact">
-				<h2>
-					Contact
-				</h2>
-
-				<div class="row container-contact_line">
-					<i class="col-1 fas fa-home"></i>
-					<p class="col">
-						66 Rue Du Bonheur velu
-						77500 TONPLACARD
-					</p>
-				</div>
-
-				<div class="row container-contact_line">				
-					<i class="col-1 fas fa-mobile-alt"></i>
-					<p class="col">
-						08 36 75 75 75
-					</p>				
-				</div>
-
-				<div class="row container-contact_line">				
-					<i class="col-1 far fa-clock"></i>
-					<p class="col">
-						Ouvert de 9h à 20h
-					</p>				
-				</div>
-
-				<div class="row container-contact_line">				
-					<i class="col-1 far fa-envelope"></i>
-					<p class="col">
-						orinoco@contact.com
-					</p>			
-				</div>
-			</section>
-		</footer>
+			<!-- Grid container -->
+		  
+			<!-- Copyright -->
+			<div class="text-center p-3 darker">
+			  © 2021 Copyright:
+			  <a class="text-white" href="">Orinoco.com</a>
+			</div>
+			<!-- Copyright -->
+		  </footer>
 		
 
 		<!-- Liens JavaScript -->

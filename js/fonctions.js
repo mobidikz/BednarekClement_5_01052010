@@ -18,24 +18,24 @@ async function showProduits() {
         produits.map(produit => (
 
             `
-                <div class="row container-products">
-                    <div class="col container-products_card">
-                        <a href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
+                <div class="row container-products justify-content-center">
+                    <div class="col col-md-9 col-lg-6 container-products_card text-center my-4  rounded border border-info bg-info">
+                        <a  class="btn btn-warning" href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
 
                         <div class="container-products_card_img">
-                            <img class="produit-photo" src="${produit.imageUrl}"/>
+                            <img class="produit-photo img-fluid float " src="${produit.imageUrl}"/>
                         </div>
 
                         <div class="container-products_card_name">
-                            <h3 class="produit-nom"> ${produit.name} </h3>
+                            <h3 class="produit-nom text-center"> ${produit.name} </h3>
                         </div>
 
-                        <div class="container-products_card_stars">
+                        <div class="container-products_card_stars text-center">
                             ⭐⭐⭐⭐⭐
                         </div>
 
                         <div class="container-products_card_price">
-                            <em class="produit-prix"> ${numberWithCommas(produit.price)} € </em>
+                            <p class="produit-prix text-center"> ${numberWithCommas(produit.price)} € </p>
                         </div>
                     </div>
                 </div>
