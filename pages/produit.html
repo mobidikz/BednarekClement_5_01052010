@@ -37,7 +37,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div id="navbarContent" class="collapse navbar-collapse justify-content-end">
-						<ul class="navbar-nav">
+						<ul class="navbar-nav text-right">
 							<li class="nav-item active">
 								<a class="nav-link" href="index.html">Accueil</a>
 							</li>
@@ -58,136 +58,137 @@
 		</div>
 		</header>
 
-		<!-- Bloc 0 : Titre -->
-		<section>
-			<h1 id="nom-produit-titre">
-				
-			</h1>
-			<p id="description-produit-titre">
-				
-			</p>
-		</section>
-
-		<!-- Bloc 1 : Produit et personnalisation -->
-		<section>
-			<div>
-				<img class="produit-photo" id="image-produit" />
-			</div>
+		<main class="mx-5">
+			<!-- Bloc 0 : Titre -->
 			<section>
-				<h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
-					 
-				</h2>
-				<div>
-					<div> 
-						⭐⭐⭐⭐⭐
-					</div>
-					<div>
-						Stock
-					</div>
-				</div>
-				<p id="description-produit">
-				
+				<h1 id="nom-produit-titre">
+					
+				</h1>
+				<p id="description-produit-titre">
+					
 				</p>
-				<div class="personnalisation">
-					<table>
-						<tr>
-							<td>Prix</td>
-							<td id="prix-produit"></td>
-						</tr>
-
-						<tr>
-							<td>Taille</td>
-							<td>35 cm</td>
-						</tr>
-
-						<tr>
-							<td>Couleur</td>
-							<td id="couleur-produit">
-								
-							</td>
-						</tr>
-
-						<tr>
-							<td>Disponibilité</td>
-							<td>7 en stock</td>
-						</tr>
-
-					</table>
-				</div>
-
-				<button onclick="setData()" type="button" class="btn btn-success">Ajouter au panier</button>
-
-
 			</section>
-		</section>
 
-		<!-- Bloc 2 : Description détaillée du produit -->
-		<section>
-			<h2>
-				Description du produit
-			</h2>
+			<!-- Bloc 1 : Produit et personnalisation -->
+			<section>
+				<div>
+					<img class="produit-photo img-fluid float" id="image-produit" />
+				</div>
+				<section>
+					<h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
+						
+					</h2>
+					<div>
+						<div> 
+							⭐⭐⭐⭐⭐
+						</div>
+						<div>
+							Stock
+						</div>
+					</div>
+					<p id="description-produit">
+					
+					</p>
+					<div class="personnalisation">
+						<table>
+							<tr>
+								<td>Prix</td>
+								<td id="prix-produit"></td>
+							</tr>
 
-			<p>
-				Nom de la liste.
-			</p>
-			<p>
-				Introduction de 2 lignes.
-			</p>
-			<ul>
-				<li>
-					Détail 1
-				</li>
+							<tr>
+								<td>Taille</td>
+								<td>35 cm</td>
+							</tr>
 
-				<li>
-					Détail 2
-				</li>
+							<tr>
+								<td>Couleur</td>
+								<td id="couleur-produit">
+									
+								</td>
+							</tr>
 
-				<li>
-					Détail 3
-				</li>
-				<li>
-					Détail 4
-				</li>
-			</ul>
+							<tr>
+								<td>Disponibilité</td>
+								<td>7 en stock</td>
+							</tr>
 
-			<p>
-				Conclusion
-			</p>
-			<p>
-				Conclusion en deux ou trois lignes.
-			</p>
-		</section>
+						</table>
+					</div>
 
-		<div class="container">
-			<div class="row justify-content-center">
-			  <div class="col-6">          
-				<div id="carouselControls" class="carousel slide" data-ride="carousel">
-				  <div class="row carousel-inner ">
+					<button onclick="setData()" type="button" class="btn btn-success">Ajouter au panier</button>
 
-					<div class="col carousel-item active">
-					  <img src="/images/teddy_1.webp" class="d-block" witgh= "178px" alt="Photo Norbert">
+
+				</section>
+			</section>
+
+			<!-- Bloc 2 : Description détaillée du produit -->
+			<section>
+				<h2>
+					Description du produit
+				</h2>
+
+				<p>
+					Nom de la liste.
+				</p>
+				<p>
+					Introduction de 2 lignes.
+				</p>
+				<ul>
+					<li>
+						Détail 1
+					</li>
+
+					<li>
+						Détail 2
+					</li>
+
+					<li>
+						Détail 3
+					</li>
+					<li>
+						Détail 4
+					</li>
+				</ul>
+
+				<p>
+					Conclusion
+				</p>
+				<p>
+					Conclusion en deux ou trois lignes.
+				</p>
+			</section>
+
+			<div class="container ">
+				<div class="row justify-content-center">
+				<div class="col-6">          
+					<div id="carouselControls" class="carousel slide" data-ride="carousel">
+					<div class="row carousel-inner  ">
+
+						<div class="col carousel-item active">
+						<img src="/images/teddy_1.webp" class="d-block" witgh= "178px" alt="Photo Norbert">
+						</div>
+
+						<div class="carousel-item">
+						<img src="/images/teddy_2.webp" class="d-block"  witgh= "178px" alt="Photo Arnold">
+						</div>
+
+						<div class="carousel-item">
+							<img src="/images/teddy_3.webp" class="d-block" witgh= "178px" alt="Photo Lenny and Carl">
+						</div>
 					</div>
 
 					<div class="carousel-item">
-					  <img src="/images/teddy_2.webp" class="d-block"  witgh= "178px" alt="Photo Arnold">
+						<img src="/images/teddy_4.webp" class="d-block"  witgh= "178px"alt="Photo Gustav">
 					</div>
 
 					<div class="carousel-item">
-						<img src="/images/teddy_3.webp" class="d-block" witgh= "178px" alt="Photo Lenny and Carl">
-					  </div>
-				  </div>
-
-				  <div class="carousel-item">
-					<img src="/images/teddy_4.webp" class="d-block"  witgh= "178px"alt="Photo Gustav">
-				  </div>
-
-				  <div class="carousel-item">
-					<img src="/images/teddy_5.webp" class="d-block"  witgh= "178px" alt="Photo Garfunkel">
-				  </div>
-         
-				</div>        
-			  </div>
-
+						<img src="/images/teddy_5.webp" class="d-block"  witgh= "178px" alt="Photo Garfunkel">
+					</div>
+			
+					</div>        
+				</div>
+			</main>
 
 
 		

@@ -46,7 +46,7 @@
 								<a class="nav-link" href="#">À propos</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link" href="confirmation-commande.html">Contact</a>
 							</li>
 							<li class="nav-item active">
 								<a class="nav-link" href="panier.html">Panier</a>
@@ -58,81 +58,81 @@
 			</div>
 		</div>
 		</header>
-
-		<!-- Bloc 0 : Titre -->
-		<section class="mx-3">
-			<h1>
-				Votre panier
-			</h1>
-			<p>
-				Vos nouveaux compagnons vous rejoindront bientôt 
-			</p>
-		</section>
-
-		<div class="row mx-auto w-75">
-			<section class="col-12 col-md-4 cart">
-				<h2>
-					Nounours
-				</h2>
-				
-				<div id="lignes-produit"></div> <!-- Le js injecte le html généré ici -->
-
+		<main class="mx-auto">
+			<!-- Bloc 0 : Titre -->
+			<section class="mx-3 text-center">
+				<h1>
+					Votre panier
+				</h1>
+				<p>
+					Vos nouveaux compagnons vous rejoindront bientôt 
+				</p>
 			</section>
 
-			<form class="col-8" id="shipping">
-				<h2>
-					Adresse de livraison
-				</h2>
+			<div class="row mx-auto">
+				<section class="col-12 col-md-6 cart">
+					<h2>
+						Nounours
+					</h2>
+					
+					<div id="lignes-produit" class="col-7"></div> <!-- Le js injecte le html généré ici -->
 
-				<div class="total-price">
-					<p>Prix total</p>
-					<p class="h1" id="prix-total"></p> <!-- Prix caculer en js -->
-				</div>
+				</section>
 
-				<div>
-					<label class="justify-content-end" for="firsName">
-						Prénom
-					</label>
-					<input type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
-				</div>
+				<form class="col text-right" id="shipping">
+					<div class="total-price">
+						<h2>Prix total</h2>
+						<p class="h1" id="prix-total"></p> <!-- Prix caculer en js -->
+					</div>
 
-				<div>
-					<label class="justify-content-end" for="lastName">
-						Nom
-					</label>
-					<input type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
-				</div>
+					<h2>
+						Adresse de livraison
+					</h2>
 
-				<div>
-					<label for="adress">
-						Adresse
-					</label>
-					<input type="text" name="adress" placeholder="Adresse" required>
-				</div>
+					<div>
+						<label class="justify-content-end" for="firsName">
+							Prénom
+						</label>
+						<input type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
+					</div>
 
-				<div>
-					<label for="city">
-						Ville
-					</label>
-					<input type="text" name="city" placeholder="Ville" required pattern="^[A-zÀ-ú-]+$">
-				</div>
+					<div>
+						<label class="justify-content-end" for="lastName">
+							Nom
+						</label>
+						<input type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
+					</div>
 
-				<div>
-					<label for="email">
-						E-mail
-					</label>
-					<input type="email" name="email" placeholder="E-mail" required>
-				</div>
+					<div>
+						<label for="adress">
+							Adresse
+						</label>
+						<input type="text" name="adress" placeholder="Adresse" required>
+					</div>
 
-				<input type="submit"  value="Validé">
+					<div>
+						<label for="city">
+							Ville
+						</label>
+						<input type="text" name="city" placeholder="Ville" required pattern="^[A-zÀ-ú-]+$">
+					</div>
 
-				<p id="erreur"></p>
-			</form>
-		</div>
+					<div>
+						<label for="email">
+							E-mail
+						</label>
+						<input type="email" name="email" placeholder="E-mail" required>
+					</div>
 
+					<input type="submit"  value="Validé">
+
+					<p id="erreur"></p>
+				</form>
+			</div>
+		</main>
 
 		
-		<footer class="bg-info text-center text-white">
+		<footer class="bg-info text-center text-white fixed-bottom">
 			<!-- Grid container -->
 			<div class="container p-4 pb-0">
 			  <!-- Section: Social media -->

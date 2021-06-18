@@ -33,26 +33,34 @@ function loadPanier() {
 
             `
                 <div class="container">
-                    <div class="raw">
-                        <div class="col-3"> ${produit.Nom} </div>
+                    <div class="row">
+                        <div class="col"> ${produit.Nom} </div>
 
-                        <div class="col-3"> ${produit.Couleur} </div>
+                        <div class="col"> ${produit.Couleur} </div>
 
-                        <div class="col-3">
+                        <div class="col">
                                 image produit
                         </div>
 
-                        <div class="col-3">
+                        <div class="col">
                                 <p class=""> ${produit.Prix} € </p>
                         </div>
 
-                        <button onclick="supprProduit(${index})" type="button" class="btn btn-danger">Supprimer</button>
+                        <button onclick="supprProduit(${index})" type="button" class="btn btn-danger col">Supprimer</button>
                         
                     </div>
                 </div>
             `
         )).join('')
     );
+
+    const reducer = (acc, cur) => acc + parseFloat(cur.Prix); // reduce() pour ajouer les élément du tableau entre eux ET parseFloat() pour transforter la sting et float
+    const prixTotal = panier.reduce(reducer, 0);
+    console.log("Prix total " + prixTotal);
+
+    const prixTotalInser = document.getElementById("prix-total");
+    prixTotalInser.innerHTML = (prixTotal + " €");
+
 };
 
     
