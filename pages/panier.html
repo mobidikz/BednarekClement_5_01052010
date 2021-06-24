@@ -69,7 +69,7 @@
 				</p>
 			</section>
 
-			<div class="row mx-auto">
+			<div class="row mx-auto my-5">
 				<section class="col-12 col-md-6 cart">
 					<h2>
 						Nounours
@@ -79,55 +79,57 @@
 
 				</section>
 
-				<form class="col text-right" id="shipping">
+				<div class="col text-right">
 					<div class="total-price">
 						<h2>Prix total</h2>
 						<p class="h1" id="prix-total"></p> <!-- Prix caculer en js -->
 					</div>
 
-					<h2>
+					<h2 class="my-5">
 						Adresse de livraison
 					</h2>
 
-					<div>
-						<label class="justify-content-end" for="firsName">
-							Prénom
-						</label>
-						<input type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
-					</div>
+					<form class="col text-right" id="contact" action="/pages/confirmation-commande.html" method="get" onsubmit="setAdress();">
+						<div>
+							<label class="justify-content-end" for="firsName">
+								Prénom
+							</label>
+							<input id="firstName" type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
+						</div>
 
-					<div>
-						<label class="justify-content-end" for="lastName">
-							Nom
-						</label>
-						<input type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
-					</div>
+						<div>
+							<label class="justify-content-end" for="lastName">
+								Nom
+							</label>
+							<input id="lastName" type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
+						</div>
 
-					<div>
-						<label for="adress">
-							Adresse
-						</label>
-						<input type="text" name="adress" placeholder="Adresse" required>
-					</div>
+						<div>
+							<label for="adress">
+								Adresse
+							</label>
+							<input id="adress" type="text" name="adress" placeholder="Adresse" required>
+						</div>
 
-					<div>
-						<label for="city">
-							Ville
-						</label>
-						<input type="text" name="city" placeholder="Ville" required pattern="^[A-zÀ-ú-]+$">
-					</div>
+						<div>
+							<label for="city">
+								Ville
+							</label>
+							<input id="city" type="text" name="city" placeholder="Ville" required pattern="^[A-zÀ-ú-]+$">
+						</div>
 
-					<div>
-						<label for="email">
-							E-mail
-						</label>
-						<input type="email" name="email" placeholder="E-mail" required>
-					</div>
+						<div>
+							<label for="email">
+								E-mail
+							</label>
+							<input id="email" type="email" name="email" placeholder="E-mail" required>
+						</div>
 
-					<input type="submit"  value="Validé">
+						<input type="submit" class="btn btn-success col w-25" value="Validé"></input>
 
-					<p id="erreur"></p>
-				</form>
+						<p id="erreur"></p>
+					</form>
+				</div>
 			</div>
 		</main>
 

@@ -19,7 +19,7 @@ function loadPanier() {
                         <div class="col"> ${produit.Couleur} </div>
 
                         <div class="col">
-                                image produit
+                            🐻
                         </div>
 
                         <div class="col">
@@ -40,4 +40,35 @@ function loadPanier() {
     prixTotalInser.innerHTML = (prixTotal + " €");
 }
 
+//Fontion de récupération de l'adresse
+function loadAdress() {
+    const adress = JSON.parse(localStorage.getItem("adress"));
+    console.log(adress);
+
+    const blockAdress = document.getElementById("adresse-livraison");
+    blockAdress.innerHTML = (
+        `
+            <div class="container text-right">
+                <div class="row">
+                    <div class="col"> ${adress.firstName} ${adress.lastName} </div>
+                </div>
+
+                <div class="row">  
+                    <div class="col"> ${adress.city} </div>
+                    
+                </div>
+
+                <div class="row">  
+                    <div class="col"> ${adress.adress} </div>
+                </div>
+
+                <div class="row">  
+                    <div class="col"> ${adress.email} </div>
+                </div>
+            </div>
+        `
+    );
+}
+
 loadPanier();
+loadAdress();

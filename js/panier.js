@@ -1,25 +1,33 @@
 //Fonction validation de formulaire
-document.forms["shipping"].addEventListener("submit", function(e) {
+// function testForm() {
 
-    let erreur;
+//     let erreur;
 
-    let inputs = this;
+//     let inputs = document.getElementById("contact").elements;
 
-    for (var i = 0; i < inputs.length; i++) {
-        console.log(inputs[i]);
-        if (!inputs[i].value) {
-            erreur = "Veuillez renseigner tous les champs";
-        }
-    }
+//     for (var i = 0; i < inputs.length; i++) {
+//         console.log("2");
+//         console.log(inputs[i]);
+//         if (!inputs[i].value) {
+//             erreur = "Veuillez renseigner tous les champs";
+//         }
+//     }
 
-    if (erreur) {
-        e.preventDefault();
-        document.getElementById("erreur").innerHTML = erreur;
-        return false;
-    } else {
-        alert("Merci pour votre commande :) \nVous allez être rédiriger votre la récapitulatif de votre commande"); // Remplacer par une redirection vers la page confirmation de commande
-    }
-})
+//     if (erreur) {
+//         document.getElementById("erreur").innerHTML = erreur;
+//         return false;
+//     } else {
+//         alert("Merci pour votre commande :) \nVous allez être rédiriger votre la récapitulatif de votre commande"); // Remplacer par une redirection vers la page confirmation de commande
+//     }
+// };
+
+
+//Callback pour la validation du formulaire -> remplacé par onsubmit sur le html
+// document.getElementById("contact").addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     setAdress();
+    
+// });
 
 //Fontion de récupération des données dans le local storage
 function loadPanier() {
@@ -78,39 +86,29 @@ function supprProduit(index) {
     loadPanier();
 };
 
+//Fonction récupération adresses
+function setAdress() {
+    // let contact = document.getElementsByTagName("input");
+    // console.log(contact);
+
+    const contact = new Object();
+    contact.firstName = document.getElementById("firstName").value;
+    contact.lastName = document.getElementById("lastName").value;
+    contact.city = document.getElementById("city").value;
+    contact.adress = document.getElementById("adress").value;
+    contact.email = document.getElementById("email").value;
+
+    // ou écrit de cette manière 
+    // const contact2 = {};
+    // ["firstName", "lastName", "city", "adress", "email"].forEach((id) => {
+    //     contact2[id] = document.getElementById(id).value
+    // });
+
+    console.log(contact);
+
+    // transforme l'objet en chaine de caractères et l'envois sur le localStorage
+    localStorage.setItem("adress", JSON.stringify(contact));
+}
+
 loadPanier();
 
-// Array.from(child.parentNode.children).indexOf(child);
-
-
-// <div class="col-3">
-//         <img class="produit-photo img-fluid float " src="${produit.imageUrl}"/>
-// </div>
-
-
-
-// function meFonction (e){
-//     let erreur;
-
-//     let inputs = this;
-
-//     for (var i = 0; i < inputs.length; i++) {
-//         console.log(inputs[i]);
-//         if (!inputs[i].value) {
-//             erreur = "Veuillez renseigner tous les champs";
-//         }
-//     }
-
-//     if (erreur) {
-//         e.preventDefault();
-//         document.getElementById("erreur").innerHTML = erreur;
-//         return false;
-//     } else {
-//         alert("Merci pour votre commande :) n/Vous allez être rédiriger votre la récapitulatif de votre commande"); // Remplacer par une redirection vers la page confirmation de commande
-//     }
-
-// }
-
-
-
-// document.forms["shipping"].addEventListener("submit", meFonction(e) )
