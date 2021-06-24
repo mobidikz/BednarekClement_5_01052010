@@ -35,11 +35,11 @@ async function presProduct() {
     prixProduit.innerHTML = numberWithCommas(produit.price);
               
    const imageProduit = document.getElementById("image-produit");
-   imageProduit.setAttribute("src" , produit.imageUrl);                 
-
-
-                                   
-    };
+   imageProduit.setAttribute("src" , produit.imageUrl); 
+   
+   idProduit = produit._id;
+                               
+};
 
 // Selection de la couleur du produit
 function generateSelect(items) {
@@ -71,6 +71,7 @@ function numberWithCommas(x){
 let couleurProduit ="";
 let nomProduit = "";
 let prixProduit ="";
+let idProduit =""
 
 function setData(){
  
@@ -90,7 +91,8 @@ function setData(){
         {
              Nom : nomProduit,
              Prix : prixProduit,
-             Couleur : couleurProduit
+             Couleur : couleurProduit,
+             id : idProduit
         }
     );
   
