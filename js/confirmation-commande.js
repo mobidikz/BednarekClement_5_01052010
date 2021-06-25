@@ -41,29 +41,29 @@ function loadPanier() {
 }
 
 //Fontion de récupération de l'adresse
-function loadAdress() {
-    const adress = JSON.parse(localStorage.getItem("adress"));
-    console.log(adress);
+function loadAddress() {
+    const address = JSON.parse(localStorage.getItem("contact"));
+    console.log(address);
 
-    const blockAdress = document.getElementById("adresse-livraison");
-    blockAdress.innerHTML = (
+    const blockAddress = document.getElementById("adresse-livraison");
+    blockAddress.innerHTML = (
         `
             <div class="container text-right">
                 <div class="row">
-                    <div class="col"> ${adress.firstName} ${adress.lastName} </div>
+                    <div class="col"> ${address.firstName} ${address.lastName} </div>
                 </div>
 
                 <div class="row">  
-                    <div class="col"> ${adress.city} </div>
+                    <div class="col"> ${address.city} </div>
                     
                 </div>
 
                 <div class="row">  
-                    <div class="col"> ${adress.adress} </div>
+                    <div class="col"> ${address.address} </div>
                 </div>
 
                 <div class="row">  
-                    <div class="col"> ${adress.email} </div>
+                    <div class="col"> ${address.email} </div>
                 </div>
             </div>
         `
@@ -71,4 +71,4 @@ function loadAdress() {
 }
 
 loadPanier();
-loadAdress();
+loadAddress();

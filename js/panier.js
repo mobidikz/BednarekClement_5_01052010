@@ -1,34 +1,3 @@
-//Fonction validation de formulaire
-// function testForm() {
-
-//     let erreur;
-
-//     let inputs = document.getElementById("contact").elements;
-
-//     for (var i = 0; i < inputs.length; i++) {
-//         console.log("2");
-//         console.log(inputs[i]);
-//         if (!inputs[i].value) {
-//             erreur = "Veuillez renseigner tous les champs";
-//         }
-//     }
-
-//     if (erreur) {
-//         document.getElementById("erreur").innerHTML = erreur;
-//         return false;
-//     } else {
-//         alert("Merci pour votre commande :) \nVous allez être rédiriger votre la récapitulatif de votre commande"); // Remplacer par une redirection vers la page confirmation de commande
-//     }
-// };
-
-
-//Callback pour la validation du formulaire -> remplacé par onsubmit sur le html
-// document.getElementById("contact").addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     setAdress();
-    
-// });
-
 //Fontion de récupération des données dans le local storage
 function loadPanier() {
     const panier = JSON.parse(localStorage.getItem("unNounours"));
@@ -86,49 +55,6 @@ function supprProduit(index) {
     loadPanier();
 };
 
-//Fonction récupération adresses
-// function setAdress() {
-//     // let contact = document.getElementsByTagName("input");
-//     // console.log(contact);
-
-//     const contact = new Object();
-//     contact.firstName = document.getElementById("firstName").value;
-//     contact.lastName = document.getElementById("lastName").value;
-//     contact.city = document.getElementById("city").value;
-//     contact.adress = document.getElementById("adress").value;
-//     contact.email = document.getElementById("email").value;
-
-
-
-
-//     const tableau = [
-//         { name: 'TRodo', id: 'dkjfdsjfdkf474' },
-//         { name: 'Jean', id: 'dkjfdsjfdkf474' },
-//         { name: 'Arnold', id: 'dkjfdsjfdkf474' }
-//     ]
-
-//     // const produits = tableau.map(t => t.name) // ['TRodo', 'Jean', 'Arnold']
-
-
-    
-
-
-
-//     // ou écrit de cette manière 
-//     // const contact2 = {};
-//     // ["firstName", "lastName", "city", "adress", "email"].forEach((id) => {
-//     //     contact2[id] = document.getElementById(id).value
-//     // });
-
-//     console.log(contact);
-
-
-//     send();
-
-//     // transforme l'objet en chaine de caractères et l'envois sur le localStorage
-//     localStorage.setItem("adress", JSON.stringify(contact));
-// }
-
 //Fonction envois des informations à l'API
 async function send(e) {
 
@@ -137,8 +63,10 @@ async function send(e) {
     contact.firstName = document.getElementById("firstName").value;
     contact.lastName = document.getElementById("lastName").value;
     contact.city = document.getElementById("city").value;
-    contact.address = document.getElementById("adress").value;
+    contact.address = document.getElementById("address").value;
     contact.email = document.getElementById("email").value;
+
+    localStorage.setItem("contact", JSON.stringify(contact));
 
     //Création du tableau products
     let products = JSON.parse(localStorage.getItem("unNounours"));
@@ -163,7 +91,7 @@ async function send(e) {
         
 
         console.log("changement de page");
-        // window.location = "/pages/confirmation-commande.html";
+        window.location = "/pages/confirmation-commande.html";
         return true;
       
         console.log(body);
