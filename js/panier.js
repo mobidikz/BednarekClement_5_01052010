@@ -41,17 +41,17 @@ function loadPanier() {
 
             `
                 <div class="container">
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col"> ${produit.Nom} </div>
 
                         <div class="col"> ${produit.Couleur} </div>
 
                         <div class="col">
-                                image produit
+                            🐻
                         </div>
 
                         <div class="col">
-                                <p class=""> ${produit.Prix} € </p>
+                            <p class=""> ${produit.Prix} € </p>
                         </div>
 
                         <button onclick="supprProduit(${index})" type="button" class="btn btn-danger col">Supprimer</button>

@@ -33,7 +33,7 @@
 					<a class="navbar-brand" href="index.html">
 						<img src="/images/logo-small.webp" width="80" alt="Site logo">
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"  aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div id="navbarContent" class="collapse navbar-collapse justify-content-end">
@@ -55,14 +55,13 @@
 					</nav>
 				</div>
 			</div>
-		</div>
 		</header>
 
 		<main class="mx-5">
 			<!-- Bloc 0 : Titre -->
 			<section>
 				<h1 id="nom-produit-titre">
-					
+					Nom
 				</h1>
 				<p id="description-produit-titre">
 					
@@ -70,20 +69,20 @@
 			</section>
 
 			<!-- Bloc 1 : Produit et personnalisation -->
-			<section>
-				<div>
-					<img class="produit-photo img-fluid float" id="image-produit" />
+			<div>
+				<div >
+					<img class="produit-photo img-fluid float" id="image-produit" src="#" />
 				</div>
 				<section>
-					<h2 class="produit-nom" id="nom-produit" value="${produit.name}"> 
-						
+					<h2 class="produit-nom" id="nom-produit"> 
+						Nom
 					</h2>
 					<div>
 						<div> 
 							⭐⭐⭐⭐⭐
 						</div>
-						<div>
-							Stock
+						<div class="text-success">
+							En Stock
 						</div>
 					</div>
 					<p id="description-produit">
@@ -120,9 +119,9 @@
 
 
 				</section>
-			</section>
+			</div>
 
-			<!-- Bloc 2 : Description détaillée du produit -->
+			<!-- Bloc 2 : Description détaillée du produit
 			<section>
 				<h2>
 					Description du produit
@@ -187,16 +186,17 @@
 					</div>
 			
 					</div>        
-				</div>
+				</div> -->
 			</main>
 
 
 		
-			  <footer class="bg-info text-center text-white">
+			  <footer class="bg-info text-center text-white mt-5
+			  ">
 				<!-- Grid container -->
 				<div class="container p-4 pb-0">
 				  <!-- Section: Social media -->
-				  <section class="mb-4">
+				  <div class="mb-4">
 					<!-- Facebook -->
 					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
 					  ><i class="fab fa-facebook-f"></i
@@ -226,7 +226,7 @@
 					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
 					  ><i class="fab fa-github"></i
 					></a>
-				  </section>
+					  </div>
 				  <!-- Section: Social media -->
 				</div>
 				<!-- Grid container -->

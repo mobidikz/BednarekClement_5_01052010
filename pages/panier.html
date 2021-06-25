@@ -34,7 +34,7 @@
 					<a class="navbar-brand" href="index.html">
 						<img src="/images/logo-small.webp" width="80" alt="Site logo">
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div id="navbarContent" class="collapse navbar-collapse justify-content-end">
@@ -56,11 +56,10 @@
 					</nav>
 				</div>
 			</div>
-		</div>
 		</header>
 		<main class="mx-auto">
 			<!-- Bloc 0 : Titre -->
-			<section class="mx-3 text-center">
+			<section class="mx-3 my-5 text-center">
 				<h1>
 					Votre panier
 				</h1>
@@ -69,13 +68,13 @@
 				</p>
 			</section>
 
-			<div class="row mx-auto my-5">
+			<div class="row mx-auto mx-md-5 my-5">
 				<section class="col-12 col-md-6 cart">
 					<h2>
 						Nounours
 					</h2>
 					
-					<div id="lignes-produit" class="col-7"></div> <!-- Le js injecte le html généré ici -->
+					<div id="lignes-produit" class="col-12"></div> <!-- Le js injecte le html généré ici -->
 
 				</section>
 
@@ -91,7 +90,7 @@
 
 					<form class="col text-right" id="contact" action="/pages/confirmation-commande.html" method="get" onsubmit="send(); return false">
 						<div>
-							<label class="justify-content-end" for="firsName">
+							<label class="justify-content-end" for="firstName">
 								Prénom
 							</label>
 							<input id="firstName" type="text" name="firstName" placeholder="Prénom" required pattern="^[A-zÀ-ú-]+$">
@@ -101,7 +100,7 @@
 							<label class="justify-content-end" for="lastName">
 								Nom
 							</label>
-							<input id="lastName" type="text" name="lastName" placeholder="Nom" require pattern="^[A-zÀ-ú-]+$">
+							<input id="lastName" type="text" name="lastName" placeholder="Nom" required pattern="^[A-zÀ-ú-]+$">
 						</div>
 
 						<div>
@@ -125,7 +124,8 @@
 							<input id="email" type="email" name="email" placeholder="E-mail" required>
 						</div>
 
-						<input type="submit" class="btn btn-success col w-25" value="Validé"></input>
+						<input type="submit" class="btn btn-success col w-25" value="Validé">
+						
 
 						<p id="erreur"></p>
 					</form>
@@ -134,11 +134,11 @@
 		</main>
 
 		
-		<footer class="bg-info text-center text-white fixed-bottom">
+		<footer class="bg-info text-center text-white">
 			<!-- Grid container -->
 			<div class="container p-4 pb-0">
 			  <!-- Section: Social media -->
-			  <section class="mb-4">
+			  <div class="mb-4">
 				<!-- Facebook -->
 				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
 				  ><i class="fab fa-facebook-f"></i
@@ -168,7 +168,7 @@
 				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
 				  ><i class="fab fa-github"></i
 				></a>
-			  </section>
+				  </div>
 			  <!-- Section: Social media -->
 			</div>
 			<!-- Grid container -->
@@ -179,13 +179,15 @@
 			  <a class="text-white" href="">Orinoco.com</a>
 			</div>
 			<!-- Copyright -->
-		  </footer>
-		
+		</footer>
+	</div>	
+
 	<script src="/js/panier.js"></script>
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>

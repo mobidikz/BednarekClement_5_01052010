@@ -22,6 +22,7 @@ async function presProduct() {
     const nomProduit = document.getElementById("nom-produit");
     nomProduit.innerHTML = produit.name;
 
+
     const descriptionProduitTitre = document.getElementById("description-produit-titre");
     descriptionProduitTitre.innerHTML = produit.description;
 
@@ -32,7 +33,7 @@ async function presProduct() {
     couleurProduit.innerHTML = generateSelect(produit.colors);
 
     const prixProduit = document.getElementById("prix-produit");
-    prixProduit.innerHTML = numberWithCommas(produit.price);
+    prixProduit.innerHTML = numberWithCommas(produit.price + " €");
               
    const imageProduit = document.getElementById("image-produit");
    imageProduit.setAttribute("src" , produit.imageUrl); 
