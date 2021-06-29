@@ -70,5 +70,17 @@ function loadAddress() {
     );
 }
 
+// Récuperation du numéro de commande
+async function orderId(){
+    const parsedUrl = new URL(window.location.href);
+    const id = parsedUrl.searchParams.get("order-id");
+
+    const orderId = document.getElementById("order-id");
+    orderId.innerHTML = id;
+
+};
+
+
 loadPanier();
 loadAddress();
+orderId();

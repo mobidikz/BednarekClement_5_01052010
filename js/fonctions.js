@@ -20,9 +20,8 @@ async function showProduits() {
             `
                 <div class="row container-products justify-content-center">
                     <div class="col col-md-9 col-lg-6 container-products_card text-center my-4  rounded border border-info bg-info">
-                        <a  class="btn btn-warning" href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
 
-                        <div class="container-products_card_img">
+                        <div class="container-products_card_img py-3">
                             <img class="produit-photo img-fluid float " src="${produit.imageUrl}"/>
                         </div>
 
@@ -30,13 +29,15 @@ async function showProduits() {
                             <h3 class="produit-nom text-center"> ${produit.name} </h3>
                         </div>
 
-                        <div class="container-products_card_stars text-center">
+                        <div class="container-products_card_stars text-center pt-3">
                             ⭐⭐⭐⭐⭐
                         </div>
 
                         <div class="container-products_card_price">
                             <p class="produit-prix text-center"> ${numberWithCommas(produit.price)} € </p>
                         </div>
+
+                        <a  class="btn btn-warning my-3" href="/pages/produit.html?id=${produit._id}">Voir produit</a> 
                     </div>
                 </div>
             `

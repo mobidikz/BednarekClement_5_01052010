@@ -90,8 +90,8 @@ async function send(e) {
 
         
 
-        console.log("changement de page");
-        window.location = "/pages/confirmation-commande.html";
+
+        window.location = `/pages/confirmation-commande.html?order-id=${body.orderId}`; // redirige sur la page et ajoute un paramètre url
         return true;
       
         console.log(body);

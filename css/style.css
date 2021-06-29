@@ -5,6 +5,9 @@ html {
 h2, h3, h4, .nav-item, #transition, footer {
   text-align: centre;
 }
+.footer-down {
+ margin-top: 250px;
+}
 
 .card {
   max-width: 25rem;
